@@ -22,7 +22,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="bsu.rfe.java.group7.lab6.Stankevich.varA5.MainFrame" />
+      <option name="MAIN_CLASS_NAME" value="bsu.rfe.java.group7.lab6.Stankevich.varA1.MainFrame" />
       <module name="lab6" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -58,21 +58,37 @@
       <screen x="74" y="0" width="1462" height="864" />
     </state>
     <state x="611" y="141" key="#com.intellij.ide.util.MemberChooser/74.0.1462.864@74.0.1462.864" timestamp="1583175546958" />
-    <state width="1342" height="208" key="GridCell.Tab.0.bottom" timestamp="1583180775350">
+    <state width="1342" height="208" key="GridCell.Tab.0.bottom" timestamp="1583186438330">
       <screen x="74" y="0" width="1462" height="864" />
     </state>
-    <state width="1342" height="208" key="GridCell.Tab.0.bottom/74.0.1462.864@74.0.1462.864" timestamp="1583180775350" />
-    <state width="1342" height="208" key="GridCell.Tab.0.center" timestamp="1583180775350">
+    <state width="1342" height="208" key="GridCell.Tab.0.bottom/74.0.1462.864@74.0.1462.864" timestamp="1583186438330" />
+    <state width="1342" height="208" key="GridCell.Tab.0.center" timestamp="1583186438330">
       <screen x="74" y="0" width="1462" height="864" />
     </state>
-    <state width="1342" height="208" key="GridCell.Tab.0.center/74.0.1462.864@74.0.1462.864" timestamp="1583180775350" />
-    <state width="1342" height="208" key="GridCell.Tab.0.left" timestamp="1583180775350">
+    <state width="1342" height="208" key="GridCell.Tab.0.center/74.0.1462.864@74.0.1462.864" timestamp="1583186438330" />
+    <state width="1342" height="208" key="GridCell.Tab.0.left" timestamp="1583186438330">
       <screen x="74" y="0" width="1462" height="864" />
     </state>
-    <state width="1342" height="208" key="GridCell.Tab.0.left/74.0.1462.864@74.0.1462.864" timestamp="1583180775350" />
-    <state width="1342" height="208" key="GridCell.Tab.0.right" timestamp="1583180775350">
+    <state width="1342" height="208" key="GridCell.Tab.0.left/74.0.1462.864@74.0.1462.864" timestamp="1583186438330" />
+    <state width="1342" height="208" key="GridCell.Tab.0.right" timestamp="1583186438330">
       <screen x="74" y="0" width="1462" height="864" />
     </state>
-    <state width="1342" height="208" key="GridCell.Tab.0.right/74.0.1462.864@74.0.1462.864" timestamp="1583180775350" />
+    <state width="1342" height="208" key="GridCell.Tab.0.right/74.0.1462.864@74.0.1462.864" timestamp="1583186438330" />
+    <state width="1342" height="258" key="GridCell.Tab.1.bottom" timestamp="1583185406237">
+      <screen x="74" y="0" width="1462" height="864" />
+    </state>
+    <state width="1342" height="258" key="GridCell.Tab.1.bottom/74.0.1462.864@74.0.1462.864" timestamp="1583185406237" />
+    <state width="1342" height="258" key="GridCell.Tab.1.center" timestamp="1583185406237">
+      <screen x="74" y="0" width="1462" height="864" />
+    </state>
+    <state width="1342" height="258" key="GridCell.Tab.1.center/74.0.1462.864@74.0.1462.864" timestamp="1583185406237" />
+    <state width="1342" height="258" key="GridCell.Tab.1.left" timestamp="1583185406237">
+      <screen x="74" y="0" width="1462" height="864" />
+    </state>
+    <state width="1342" height="258" key="GridCell.Tab.1.left/74.0.1462.864@74.0.1462.864" timestamp="1583185406237" />
+    <state width="1342" height="258" key="GridCell.Tab.1.right" timestamp="1583185406237">
+      <screen x="74" y="0" width="1462" height="864" />
+    </state>
+    <state width="1342" height="258" key="GridCell.Tab.1.right/74.0.1462.864@74.0.1462.864" timestamp="1583185406237" />
   </component>
 </project>

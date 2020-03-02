@@ -1,4 +1,4 @@
-package bsu.rfe.java.group7.lab6.Stankevich.varA5;
+package bsu.rfe.java.group7.lab6.Stankevich.varA1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,7 +9,9 @@ import java.util.ArrayList;
 public class Field extends JPanel {
 
     private boolean paused;
+    private boolean taskPause;
     private ArrayList<BouncingBall> balls = new ArrayList<BouncingBall>(10);
+
 
     private Timer repaintTimer = new Timer(10, new ActionListener() {
         public void actionPerformed(ActionEvent ev) {
@@ -37,16 +39,27 @@ public class Field extends JPanel {
     public synchronized void pause() {
         paused = true;
     }
+    public synchronized void taskPause() {
+        notifyAll();
+        taskPause = true;
+        paused = false;
+    }
 
     public synchronized void resume() {
         paused = false;
+        taskPause = false;
         notifyAll();
     }
 
-    public synchronized void canMove(BouncingBall ball) throws
-            InterruptedException {
+    public synchronized void canMove(BouncingBall ball) throws InterruptedException {
         if (paused) {
             wait();
         }
+        if (taskPause) {
+            if(ball.getMark()) {
+                wait();
+            }
+        }
+
     }
 }

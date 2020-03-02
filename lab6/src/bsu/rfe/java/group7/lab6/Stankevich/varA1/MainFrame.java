@@ -1,4 +1,4 @@
-package bsu.rfe.java.group7.lab6.Stankevich.varA5;
+package bsu.rfe.java.group7.lab6.Stankevich.varA1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,6 +11,7 @@ public class MainFrame extends JFrame {
 
     private JMenuItem pauseMenuItem;
     private JMenuItem resumeMenuItem;
+    private JMenuItem modificationMenuItem;
 
     private Field field = new Field();
 
@@ -42,6 +43,7 @@ public class MainFrame extends JFrame {
                 field.pause();
                 pauseMenuItem.setEnabled(false);
                 resumeMenuItem.setEnabled(true);
+                modificationMenuItem.setEnabled(true);
             }
         };
         pauseMenuItem = controlMenu.add(pauseAction);
@@ -51,10 +53,20 @@ public class MainFrame extends JFrame {
                 field.resume();
                 pauseMenuItem.setEnabled(true);
                 resumeMenuItem.setEnabled(false);
+                modificationMenuItem.setEnabled(true);
             }
         };
         resumeMenuItem = controlMenu.add(resumeAction);
         resumeMenuItem.setEnabled(false);
+        Action modificationAction = new AbstractAction("Остановка мячей с R<10") {
+            public void actionPerformed(ActionEvent actionEvent) {
+                field.taskPause();
+                pauseMenuItem.setEnabled(true);
+                resumeMenuItem.setEnabled(true);
+            }
+        };
+        modificationMenuItem = controlMenu.add(modificationAction);
+        modificationMenuItem.setEnabled(true);
         getContentPane().add(field, BorderLayout.CENTER);
     }
 
