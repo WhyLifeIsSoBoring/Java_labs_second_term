@@ -29,4 +29,24 @@ public class Field extends JPanel {
             ball.paint(canvas);
         }
     }
+
+    public void addBall() {
+        balls.add(new BouncingBall(this));
+    }
+
+    public synchronized void pause() {
+        paused = true;
+    }
+
+    public synchronized void resume() {
+        paused = false;
+        notifyAll();
+    }
+
+    public synchronized void canMove(BouncingBall ball) throws
+            InterruptedException {
+        if (paused) {
+            wait();
+        }
+    }
 }
