@@ -46,4 +46,14 @@ public class BouncingBall implements Runnable {
     public void run() {
 
     }
+
+    public void paint(Graphics2D canvas) {
+        canvas.setColor(color);
+        canvas.setPaint(color);
+        Ellipse2D.Double ball = new Ellipse2D.Double(x-radius, y-radius,
+                2*radius, 2*radius);
+
+        canvas.draw(ball);
+        canvas.fill(ball);
+    }
 }

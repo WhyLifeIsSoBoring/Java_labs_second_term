@@ -8,4 +8,25 @@ import java.util.ArrayList;
 
 public class Field extends JPanel {
 
+    private boolean paused;
+    private ArrayList<BouncingBall> balls = new ArrayList<BouncingBall>(10);
+
+    private Timer repaintTimer = new Timer(10, new ActionListener() {
+        public void actionPerformed(ActionEvent ev) {
+            repaint();
+        }
+    });
+
+    public Field() {
+        setBackground(Color.WHITE);
+        repaintTimer.start();
+    }
+
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Graphics2D canvas = (Graphics2D) g;
+        for (BouncingBall ball: balls) {
+            ball.paint(canvas);
+        }
+    }
 }
