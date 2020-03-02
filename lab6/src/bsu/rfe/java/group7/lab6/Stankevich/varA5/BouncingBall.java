@@ -44,7 +44,31 @@ public class BouncingBall implements Runnable {
         thisThread.start();
     }
     public void run() {
+        try {
 
+            while (true) {
+                field.canMove(this);
+                if (x + speedX <= radius) {
+                    speedX = -speedX;
+                    x = radius;
+                } else if (x + speedX >= field.getWidth() - radius) {
+                    speedX = -speedX;
+                    x = new Double(field.getWidth() - radius).intValue();
+                } else if (y + speedY <= radius) {
+                    speedY = -speedY;
+                    y = radius;
+                } else if (y + speedY >= field.getHeight() - radius) {
+                    speedY = -speedY;
+                    y = new Double(field.getHeight() - radius).intValue();
+                } else {
+                    x += speedX;
+                    y += speedY;
+                }
+                Thread.sleep(16 - speed);
+            }
+        } catch (InterruptedException ex) {
+// Если нас прервали, то ничего не делаем и просто выходим
+        }
     }
 
     public void paint(Graphics2D canvas) {
