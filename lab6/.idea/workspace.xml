@@ -7,73 +7,34 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1YaFnTxuCkyw2H6GOei4q64GMV4" />
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="bsu.rfe.java.group7.lab6.Stankevich.varA5.Main" />
+      <option name="MAIN_CLASS_NAME" value="bsu.rfe.java.group7.lab6.Stankevich.varA5.MainFrame" />
       <module name="lab6" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -87,5 +48,27 @@
       <updated>1583172965097</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="260" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583173897365">
+      <screen x="74" y="0" width="1462" height="864" />
+    </state>
+    <state x="260" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/74.0.1462.864@74.0.1462.864" timestamp="1583173897365" />
+    <state width="1342" height="208" key="GridCell.Tab.0.bottom" timestamp="1583173912905">
+      <screen x="74" y="0" width="1462" height="864" />
+    </state>
+    <state width="1342" height="208" key="GridCell.Tab.0.bottom/74.0.1462.864@74.0.1462.864" timestamp="1583173912905" />
+    <state width="1342" height="208" key="GridCell.Tab.0.center" timestamp="1583173912905">
+      <screen x="74" y="0" width="1462" height="864" />
+    </state>
+    <state width="1342" height="208" key="GridCell.Tab.0.center/74.0.1462.864@74.0.1462.864" timestamp="1583173912905" />
+    <state width="1342" height="208" key="GridCell.Tab.0.left" timestamp="1583173912905">
+      <screen x="74" y="0" width="1462" height="864" />
+    </state>
+    <state width="1342" height="208" key="GridCell.Tab.0.left/74.0.1462.864@74.0.1462.864" timestamp="1583173912905" />
+    <state width="1342" height="208" key="GridCell.Tab.0.right" timestamp="1583173912905">
+      <screen x="74" y="0" width="1462" height="864" />
+    </state>
+    <state width="1342" height="208" key="GridCell.Tab.0.right/74.0.1462.864@74.0.1462.864" timestamp="1583173912905" />
   </component>
 </project>
