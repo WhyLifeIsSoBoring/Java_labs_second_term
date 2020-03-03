@@ -2,15 +2,12 @@ package bsu.rfe.java.group7.lab6.Stankevich.varA1;
 
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
-import java.util.ArrayList;
 
 public class BouncingBall implements Runnable {
 
     private static final int MAX_RADIUS = 40;
     private static final int MIN_RADIUS = 3;
     private static final int MAX_SPEED = 15;
-
-    //public ArrayList<BouncingBall> markedBalls = new ArrayList<BouncingBall>(10);
 
     private Field field;
     private int radius;
