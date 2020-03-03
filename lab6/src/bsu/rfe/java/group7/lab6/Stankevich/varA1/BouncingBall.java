@@ -25,12 +25,7 @@ public class BouncingBall implements Runnable {
 
         this.field = field;
         radius = new Double(Math.random() * (MAX_RADIUS - MIN_RADIUS)).intValue() + MIN_RADIUS;
-        if (radius < 10){
-            mark = true;
-        }
-        else {
-            mark = false;
-        }
+
 
         speed = new Double(Math.round(5 * MAX_SPEED / radius)).intValue();
         if (speed > MAX_SPEED) {
@@ -43,6 +38,13 @@ public class BouncingBall implements Runnable {
         speedY = 3 * Math.sin(angle);
 
         color = new Color((float) Math.random(), (float) Math.random(), (float) Math.random());
+
+        if (color.getRed() > (color.getBlue() + color.getGreen() )){
+            mark = true;
+        }
+        else {
+            mark = false;
+        }
 
         x = Math.random() * (field.getSize().getWidth() - 2 * radius) + radius;
         y = Math.random() * (field.getSize().getHeight() - 2 * radius) + radius;

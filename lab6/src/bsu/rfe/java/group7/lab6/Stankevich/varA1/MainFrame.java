@@ -58,7 +58,7 @@ public class MainFrame extends JFrame {
         };
         resumeMenuItem = controlMenu.add(resumeAction);
         resumeMenuItem.setEnabled(false);
-        Action modificationAction = new AbstractAction("Остановка мячей с R<10") {
+        Action modificationAction = new AbstractAction("Остановка красных мячей") {
             public void actionPerformed(ActionEvent actionEvent) {
                 field.taskPause();
                 pauseMenuItem.setEnabled(true);
