@@ -1,4 +1,4 @@
-package bsu.rfe.java.group7.lab6.Stankevich.varA1;
+package bsu.rfe.java.group7.lab7.Stankevich.varA1;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
