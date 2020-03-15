@@ -17,7 +17,9 @@ public class MainFrame extends JFrame {
     private static final int INCOMING_AREA_DEFAULT_ROWS = 10;
     private static final int OUTGOING_AREA_DEFAULT_ROWS = 5;
 
-
+    private static final int SMALL_GAP = 5;
+    private static final int MEDIUM_GAP = 10;
+    private static final int LARGE_GAP = 15;
 
     private final JTextField textFieldFrom;
     private final JTextField textFieldTo;
@@ -57,6 +59,39 @@ public class MainFrame extends JFrame {
                 sendMessage();
             }
         });
+
+        final GroupLayout layout2 = new GroupLayout(messagePanel);
+        messagePanel.setLayout(layout2);
+
+        layout2.setHorizontalGroup(layout2.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout2.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout2.createSequentialGroup()
+                                .addComponent(labelFrom)
+                                .addGap(SMALL_GAP)
+                                .addComponent(textFieldFrom)
+                                .addGap(LARGE_GAP)
+                                .addComponent(labelTo)
+                                .addGap(SMALL_GAP)
+                                .addComponent(textFieldTo))
+                        .addComponent(scrollPaneOutgoing)
+                        .addComponent(sendButton))
+                .addContainerGap());
+
+        layout2.setVerticalGroup(layout2.createSequentialGroup()
+                        .addContainerGap()
+                .addGroup(layout2.createParallelGroup(GroupLayout.Alignment.BASELINE)
+
+                        .addComponent(labelFrom)
+                        .addComponent(textFieldFrom)
+                        .addComponent(labelTo)
+                        .addComponent(textFieldTo))
+
+                .addGap(MEDIUM_GAP)
+                .addComponent(scrollPaneOutgoing)
+                .addGap(MEDIUM_GAP)
+                .addComponent(sendButton)
+                .addContainerGap());
     }
 
     private void sendMessage() {
