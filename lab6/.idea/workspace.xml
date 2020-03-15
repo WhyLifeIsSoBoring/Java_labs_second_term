@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e61bccd-8d02-48c4-8108-3430816edeae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bsu/rfe/java/group7/lab6/Stankevich/varA1/BouncingBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsu/rfe/java/group7/lab6/Stankevich/varA1/BouncingBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bsu/rfe/java/group7/lab6/Stankevich/varA1/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsu/rfe/java/group7/lab6/Stankevich/varA1/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,5 +99,9 @@
       <screen x="74" y="0" width="1462" height="864" />
     </state>
     <state width="1342" height="258" key="GridCell.Tab.1.right/74.0.1462.864@74.0.1462.864" timestamp="1583187114181" />
+    <state x="245" y="52" key="new project wizard" timestamp="1583578881687">
+      <screen x="74" y="0" width="1462" height="864" />
+    </state>
+    <state x="245" y="52" key="new project wizard/74.0.1462.864@74.0.1462.864" timestamp="1583578881687" />
   </component>
 </project>
