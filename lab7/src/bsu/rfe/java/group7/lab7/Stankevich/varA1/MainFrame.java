@@ -178,6 +178,11 @@ public class MainFrame extends JFrame {
                         "Введите текст сообщения", "Ошибка", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+            if(CorrectIP.isCorrectIpAdress(destinationAddress)) {
+                JOptionPane.showMessageDialog(this,
+                        "Ввеидте корректный IP адрес", "Ошибка", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
 
             final Socket socket = new Socket(destinationAddress, SERVER_PORT);
 
@@ -212,4 +217,5 @@ public class MainFrame extends JFrame {
             }
         });
     }
+
 }
