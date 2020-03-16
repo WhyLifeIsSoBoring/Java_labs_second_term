@@ -5,10 +5,12 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.UnknownHostException;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
@@ -141,16 +143,13 @@ public class MainFrame extends JFrame {
                                         .getAddress()
                                         .getHostAddress();
 
-                        textAreaIncoming.append(senderName +
-                                " (" + address + "): " +
-                                message + "\n");
+                        textAreaIncoming.append(senderName + " (" + address + "): " + message + "\n");
 
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
                     JOptionPane.showMessageDialog(MainFrame.this,
-                            "Ошибка в работе сервера", "Ошибка",
-                            JOptionPane.ERROR_MESSAGE);
+                            "Ошибка в работе сервера", "Ошибка", JOptionPane.ERROR_MESSAGE);
 
                 }
             }
@@ -159,8 +158,50 @@ public class MainFrame extends JFrame {
 
 
     private void sendMessage() {
-    }
+        try {
+            final String senderName = textFieldFrom.getText();
+            final String destinationAddress = textFieldTo.getText();
+            final String message = textAreaOutgoing.getText();
 
+            if (senderName.isEmpty()) {
+                JOptionPane.showMessageDialog(this,
+                        "Введите имя отправителя", "Ошибка", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            if (destinationAddress.isEmpty()) {
+                JOptionPane.showMessageDialog(this,
+                        "Введите адрес узла-получателя", "Ошибка", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            if (message.isEmpty()) {
+                JOptionPane.showMessageDialog(this,
+                        "Введите текст сообщения", "Ошибка", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            final Socket socket = new Socket(destinationAddress, SERVER_PORT);
+
+            final DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+
+            out.writeUTF(senderName);
+            out.writeUTF(message);
+
+            socket.close();
+
+            textAreaIncoming.append("Я -> " + destinationAddress + ": " + message + "\n");
+
+            textAreaOutgoing.setText("");
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(MainFrame.this,
+                    "Не удалось отправить сообщение: узел-адресат не найден", "Ошибка", JOptionPane.ERROR_MESSAGE);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(MainFrame.this,
+                    "Не удалось отправить сообщение", "Ошибка", JOptionPane.ERROR_MESSAGE);
+        }
+    }
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
