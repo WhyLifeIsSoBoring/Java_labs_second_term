@@ -4,6 +4,11 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
 import javax.swing.*;
 
 @SuppressWarnings("serial")
@@ -20,6 +25,8 @@ public class MainFrame extends JFrame {
     private static final int SMALL_GAP = 5;
     private static final int MEDIUM_GAP = 10;
     private static final int LARGE_GAP = 15;
+
+    private static final int SERVER_PORT = 4567;
 
     private final JTextField textFieldFrom;
     private final JTextField textFieldTo;
@@ -79,7 +86,7 @@ public class MainFrame extends JFrame {
                 .addContainerGap());
 
         layout2.setVerticalGroup(layout2.createSequentialGroup()
-                        .addContainerGap()
+                .addContainerGap()
                 .addGroup(layout2.createParallelGroup(GroupLayout.Alignment.BASELINE)
 
                         .addComponent(labelFrom)
@@ -111,8 +118,44 @@ public class MainFrame extends JFrame {
                 .addGap(MEDIUM_GAP)
                 .addComponent(messagePanel)
                 .addContainerGap());
-    }
 
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    final ServerSocket serverSocket = new ServerSocket(SERVER_PORT);
+
+                    while (!Thread.interrupted()) {
+                        final Socket socket = serverSocket.accept();
+                        final DataInputStream in = new DataInputStream(socket.getInputStream());
+
+                        final String senderName = in.readUTF();
+
+                        final String message = in.readUTF();
+
+                        socket.close();
+
+                        final String address =
+                                ((InetSocketAddress) socket
+                                        .getRemoteSocketAddress())
+                                        .getAddress()
+                                        .getHostAddress();
+
+                        textAreaIncoming.append(senderName +
+                                " (" + address + "): " +
+                                message + "\n");
+
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(MainFrame.this,
+                            "Ошибка в работе сервера", "Ошибка",
+                            JOptionPane.ERROR_MESSAGE);
+
+                }
+            }
+        }).start();
+    }
 
 
     private void sendMessage() {
