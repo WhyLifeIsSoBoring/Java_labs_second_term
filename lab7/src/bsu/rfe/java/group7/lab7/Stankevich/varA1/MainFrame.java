@@ -179,6 +179,7 @@ public class MainFrame extends JFrame {
                 return;
             }
             if(CorrectIP.isCorrectIpAdress(destinationAddress)) {
+                textFieldTo.requestFocus();
                 JOptionPane.showMessageDialog(this,
                         "Ввеидте корректный IP адрес", "Ошибка", JOptionPane.ERROR_MESSAGE);
                 return;
