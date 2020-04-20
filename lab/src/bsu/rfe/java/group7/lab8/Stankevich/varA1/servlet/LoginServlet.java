@@ -18,7 +18,7 @@ public class LoginServlet extends ChatServlet {
 
     public void init() throws ServletException {
         super.init();
-        
+
         String value = getServletConfig().getInitParameter("SESSION_TIMEOUT");
         if (value!=null) {
             sessionTimeout = Integer.parseInt(value);
