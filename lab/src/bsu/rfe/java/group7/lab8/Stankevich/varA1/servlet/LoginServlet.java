@@ -8,6 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import bsu.rfe.java.group7.lab8.Stankevich.varA1.entity.ChatMessage;
 import bsu.rfe.java.group7.lab8.Stankevich.varA1.entity.ChatUser;
 
 @WebServlet(name = "LoginServlet")
@@ -103,7 +105,13 @@ public class LoginServlet extends ChatServlet {
             Cookie sessionIdCookie = new Cookie("sessionId", sessionId);
             sessionIdCookie.setMaxAge(60*60*24*365);
             response.addCookie(sessionIdCookie);
+            String systemMessage = " Пользователь " + aUser.getName() + " пришел в чат ";
             response.sendRedirect(response.encodeRedirectURL("/lab8/view.html"));
+            synchronized (messages) {
+                ChatMessage str = new ChatMessage(systemMessage, aUser, Calendar.getInstance().getTimeInMillis());
+                str.setFlag(true);
+                messages.add(str);
+            }
             return null;
         } else {
             return "Извините, но имя <strong>" + name + "</strong> уже кем-то занято. Пожалуйста выберите другое имя!";

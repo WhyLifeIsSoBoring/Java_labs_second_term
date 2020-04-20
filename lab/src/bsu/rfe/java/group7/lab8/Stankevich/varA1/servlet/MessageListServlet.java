@@ -24,10 +24,15 @@ public class MessageListServlet extends ChatServlet {
 
         for (int i=messages.size()-1; i>=0; i--) {
             ChatMessage aMessage = messages.get(i);
-            pw.println("<div><strong>" + aMessage.getAuthor().getName()
+            if(aMessage.getFlag() == true) {
+                pw.println("<div><strong>" + ""
+                        + "</strong>" + aMessage.getMessage() + "</div>");
 
-                    + "</strong>: " + aMessage.getMessage() + "</div>");
+            } else {
+                pw.println("<div><strong>" + aMessage.getAuthor().getName()
 
+                        + "</strong>: " + aMessage.getMessage() + "</div>");
+            }
         }
         pw.println("</body></html>");
     }

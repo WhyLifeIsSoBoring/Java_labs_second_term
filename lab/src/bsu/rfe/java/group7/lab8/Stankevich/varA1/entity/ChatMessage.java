@@ -5,6 +5,7 @@ public class ChatMessage {
     private String message;
     private ChatUser author;
     private long timestamp;
+    private Boolean flag = false;
 
     public ChatMessage(String message, ChatUser author, long timestamp) {
         super();
@@ -35,5 +36,13 @@ public class ChatMessage {
 
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public Boolean getFlag() {
+        return flag;
+    }
+
+    public void setFlag(Boolean flag) {
+        this.flag = flag;
     }
 }
