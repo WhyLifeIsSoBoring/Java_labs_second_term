@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import bsu.rfe.java.group7.lab8.Stankevich.varA1.entity.ChatUser;
 
-@WebServlet(name="LoginServlet", urlPatterns = "LoginServlet")
+@WebServlet(name = "LoginServlet")
 public class LoginServlet extends ChatServlet {
 
     private static final long serialVersionUID = 1L;
