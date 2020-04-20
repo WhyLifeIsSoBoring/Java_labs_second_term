@@ -3,10 +3,12 @@ package bsu.rfe.java.group7.lab8.Stankevich.varA1.servlet;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import bsu.rfe.java.group7.lab8.Stankevich.varA1.entity.ChatMessage;
 import bsu.rfe.java.group7.lab8.Stankevich.varA1.entity.ChatUser;
 
+@WebServlet(name = "ChatServlet")
 public class ChatServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
