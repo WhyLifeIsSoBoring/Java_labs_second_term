@@ -11,7 +11,7 @@ import bsu.rfe.java.group7.lab8.Stankevich.varA1.entity.ChatUser;
 public class NewMessageServlet extends ChatServlet {
 
     private static final long serialVersionUID = 1L;
-    
+
     protected void doPost(HttpServletRequest request, HttpServletResponse
             response) throws ServletException, IOException {
 
