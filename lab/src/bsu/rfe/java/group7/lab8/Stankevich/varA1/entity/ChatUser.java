@@ -1,11 +1,11 @@
-package bsu.rfe.java.group7.lab7.Stankevich.varA1.entity;
+package bsu.rfe.java.group7.lab8.Stankevich.varA1.entity;
 
 public class ChatUser {
 
     private String name;
     private long lastInteractionTime;
     private String sessionId;
-    
+
     public ChatUser(String name,long lastInteractionTime,String sessionId) {
         super();
         this.name = name;
