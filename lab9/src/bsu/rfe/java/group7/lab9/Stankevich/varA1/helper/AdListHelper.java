@@ -7,7 +7,7 @@ import java.io.ObjectOutputStream;
 import javax.servlet.ServletContext;
 import bsu.rfe.java.group7.lab9.Stankevich.varA1.entity.AdList;
 
-public class AdListHelper {
+public abstract class AdListHelper {
 
     private static final String ADS_FILENAME = "WEB-INF/ads.dat";
     private static String ADS_PATH = null;
