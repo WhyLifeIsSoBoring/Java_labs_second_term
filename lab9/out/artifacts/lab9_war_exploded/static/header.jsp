@@ -10,7 +10,7 @@
 </c:if>
 <%-- Общая декоративная "шапка" для всех страниц --%>
 <div style="background-color: #a0c8ff; padding: 10px;">
-    <img src="https://images.by.prom.st/22235427_w200_h200_doska-obyavlenij.jpg" width="50" height="53" border="0" align="left" alt="image">
+    <img src="https://fainaidea.com/wp-content/uploads/2014/04/783_2.jpg" width="50" height="53" border="0" align="left" alt="image">
     <div style="font-family: 'Trebuchet',sans-serif; font-size: 30px; height: 53px; margin-left: 80px;">
         Доска объявлений
     </div>

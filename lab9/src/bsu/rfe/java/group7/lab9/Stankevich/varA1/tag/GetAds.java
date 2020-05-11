@@ -2,7 +2,6 @@ package bsu.rfe.java.group7.lab9.Stankevich.varA1.tag;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
